@@ -1,68 +1,261 @@
-<html lang="en" data-build-timestamp-utc="2024-02-27T03:17:15.403Z"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="x-dns-prefetch-control" content="on">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>Free Fire</title>
-  <link rel="icon" href="https://dl.dir.freefiremobile.com/common/web_event/tweb-event/FFSH/assets-common/ff-logo-icon.png" type="image/x-icon">
-  <link rel="shortcut icon" href="https://dl.dir.freefiremobile.com/common/web_event/tweb-event/FFSH/assets-common/ff-logo-icon.png" type="image/x-icon">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta name="title" content="FreeFire">
-  <meta name="description" content="FreeFire">
-  <meta property="og:title" content="FreeFire">
-  <meta property="og:description" content="FreeFire">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eu te amo ❤️</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at top left, #ff8fab 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #7b2cbf 0%, transparent 40%),
+        linear-gradient(135deg, #18001f, #4b0b3f, #8f174f);
+      color: white;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.08),
+        transparent
+      );
+      animation: brilho 7s infinite linear;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      width: min(90%, 700px);
+      padding: 60px 30px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow:
+        0 0 35px rgba(255, 77, 136, 0.5),
+        inset 0 0 30px rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      animation: aparecer 2s ease-out;
+    }
+
+    .coracao-principal {
+      font-size: 85px;
+      line-height: 1;
+      filter: drop-shadow(0 0 18px #ff4d88);
+      animation: pulsar 1.4s infinite ease-in-out;
+    }
+
+    h1 {
+      margin-top: 25px;
+      font-size: clamp(3rem, 10vw, 6.5rem);
+      font-weight: bold;
+      letter-spacing: 4px;
+      color: #fff;
+      text-shadow:
+        0 0 10px #ff5c9a,
+        0 0 25px #ff267f,
+        0 0 50px #ff006e;
+      animation: aparecer 2.5s ease-out;
+    }
+
+    .mensagem {
+      margin: 25px auto 0;
+      max-width: 500px;
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: #ffe6f0;
+      animation: subir 2s ease-out;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 13px 28px;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      background: linear-gradient(45deg, #ff176f, #ff75a9);
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 0 18px rgba(255, 67, 137, 0.7);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    }
+
+    .coracao {
+      position: fixed;
+      bottom: -40px;
+      color: #ff80ab;
+      font-size: 20px;
+      pointer-events: none;
+      animation: flutuar linear forwards;
+      filter: drop-shadow(0 0 8px #ff4081);
+      z-index: 1;
+    }
+
+    .particula {
+      position: fixed;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 0 12px white;
+      animation: estrela 3s infinite ease-in-out;
+      opacity: 0.7;
+    }
+
+    @keyframes pulsar {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes flutuar {
+      0% {
+        transform: translateY(0) rotate(0deg) scale(0.8);
+        opacity: 0;
+      }
+
+      15% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-115vh) rotate(360deg) scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    @keyframes brilho {
+      0% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: scale(0.7);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes subir {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes estrela {
+      0%, 100% {
+        transform: scale(0.5);
+        opacity: 0.2;
+      }
+
+      50% {
+        transform: scale(1.5);
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
-  <body>
-    <div id="app" bis_skin_checked="1"><div class="main" bis_skin_checked="1">
-      <div data-v-cad87a84="" class="home-wrapper" bis_skin_checked="1">
-        <div data-v-cad87a84="" class="home-container" bis_skin_checked="1">
-          <div data-v-cad87a84="" class="home" bis_skin_checked="1">
-            <div data-v-490a8a26="" data-v-cad87a84="" class="header" bis_skin_checked="1">
-              <div data-v-490a8a26="" class="header-content" bis_skin_checked="1">
-                <div data-v-490a8a26="" class="header__logo" bis_skin_checked="1">
-                </div>
-              </div>
-            </div>
-            <div data-v-cad87a84="" class="home__right" bis_skin_checked="1">
-              <div data-v-f545a424="" data-v-cad87a84="" class="main" bis_skin_checked="1">
-                <div data-v-f545a424="" class="main-header" bis_skin_checked="1">
-                  <h2 data-v-f545a424="" class="main__title">Rewards Redemption Site</h2>
-                  <span data-v-f545a424="" class="main__description">Please log in.</span>
-                </div>
-              </div>
 
-<link href="style.css" rel=stylesheet/>
+<body>
 
-<!-- I do not bear any Responsibitity -->
+  <main class="container">
+    <div class="coracao-principal">❤️</div>
 
-<script src="script.js"></script>
+    <h1>Eu te amo</h1>
 
-<div data-v-f423ab84="" data-v-cad87a84="" class="home-panel home__panel" bis_skin_checked="1">
-  <h4 data-v-f423ab84="" class="home-panel__title">Important Notice:</h4> <ol data-v-f423ab84="" class="list">
-    <li class="list__item">
-1. Redemption code has <span class="highlight">12/16</span> characters, consisting of capital letters and numbers.
-</li>
-<li class="list__item">
-2. Item rewards are shown in <span class="highlight"> [vault] </span> tab in game lobby; Golds or diamonds will add in account wallet automatically.
-</li>
-<li class="list__item">3. Please note redemption expiration date. Any expired codes cannot be redeemed.</li>
-<li class="list__item">4. Please contact customer service if you encountered any issue.</li>
-<li class="list__item">5. Reminder: you will not be able to redeem your rewards with guest accounts. You may bind your account to Facebook or VK in order to receive the rewards.</li></ol></div></div></div></div> <footer data-v-3a03f104="" data-v-cad87a84="" class="footer"><div data-v-3a03f104="" class="footer-rule-wrap" bis_skin_checked="1"><div data-v-3a03f104="" class="footer-rule-container" bis_skin_checked="1"><div data-v-3a03f104="" class="footer-rule" bis_skin_checked="1"><span data-v-3a03f104="">Important Notice:</span> <div data-v-cdfa79b6="" data-v-3a03f104="" class="footer-rule__icon image-container" bis_skin_checked="1"> <img data-v-cdfa79b6="" src="https://dl.dir.freefiremobile.com/common/web_event/tweb-event/redemption/img/arrow.png" alt="" class="image"></div> <div data-v-f423ab84="" data-v-3a03f104="" class="home-panel footer-rule__panel" bis_skin_checked="1"><h4 data-v-f423ab84="" class="home-panel__title">Important Notice:</h4> <ol data-v-f423ab84="" class="list"><li class="list__item">
-1. Redemption code has <span class="highlight">12/16</span> characters, consisting of capital letters and numbers.
-</li>
-<li class="list__item">
-2. Item rewards are shown in <span class="highlight"> [vault] </span> tab in game lobby; Golds or diamonds will add in account wallet automatically.
-</li>
-<li class="list__item">3. Please note redemption expiration date. Any expired codes cannot be redeemed.</li>
-<li class="list__item">4. Please contact customer service if you encountered any issue.</li>
-<li class="list__item">5. Reminder: you will not be able to redeem your rewards with guest accounts. You may bind your account to Facebook or VK in order to receive the rewards.</li></ol></div></div></div></div> <div data-v-3a03f104="" class="copyright" bis_skin_checked="1"><div data-v-cdfa79b6="" data-v-3a03f104="" class="icon image-container" bis_skin_checked="1"> <img data-v-cdfa79b6="" src="https://dl.dir.freefiremobile.com/common/web_event/tweb-event/redemption/img/logo_small_foot.jpg" alt="" class="image"></div> <div data-v-3a03f104="" class="copyright-message" bis_skin_checked="1"><p data-v-3a03f104="">Copyright © Garena International.</p> <p data-v-3a03f104="">
-        Trademarks belong to their respective owners. All rights Reserved.
-</p>
-</div>
-</div>
-</footer>
-      </div>
-    </div></div>
-  </body>
+    <p class="mensagem">
+      Você ilumina meus dias, aquece meu coração<br>
+      e torna cada momento muito mais especial.
+    </p>
+
+    <button onclick="criarExplosao()">
+      Clique aqui ❤️
+    </button>
+  </main>
+
+  <script>
+    function criarCoracao() {
+      const coracao = document.createElement("div");
+      coracao.className = "coracao";
+      coracao.innerHTML = ["❤️", "💖", "💕", "💗", "💘"][Math.floor(Math.random() * 5)];
+
+      coracao.style.left = Math.random() * 100 + "vw";
+      coracao.style.fontSize = (15 + Math.random() * 30) + "px";
+      coracao.style.animationDuration = (5 + Math.random() * 6) + "s";
+
+      document.body.appendChild(coracao);
+
+      setTimeout(() => {
+        coracao.remove();
+      }, 12000);
+    }
+
+    function criarParticulas() {
+      const particula = document.createElement("div");
+      particula.className = "particula";
+
+      particula.style.left = Math.random() * 100 + "vw";
+      particula.style.top = Math.random() * 100 + "vh";
+      particula.style.animationDelay = Math.random() * 3 + "s";
+
+      document.body.appendChild(particula);
+    }
+
+    function criarExplosao() {
+      for (let i = 0; i < 25; i++) {
+        setTimeout(criarCoracao, i * 70);
+      }
+    }
+
+    setInterval(criarCoracao, 450);
+
+    for (let i = 0; i < 35; i++) {
+      criarParticulas();
+    }
+  </script>
+
+</body>
 </html>
